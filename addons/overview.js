@@ -21,14 +21,14 @@ export class Overview {
      * Clicking the button will hide the overlay/show gome overview.
      */
     _createOverviewButton() {
-        this._addonContainer = new St.Widget({
+        this._addonContainer = new St.Widget({   //confused what makes the button on the top-right-closeButton.js
             layout_manager: new Clutter.BinLayout()
           });
 
         // Create the close button widget
         this._closeButton = new St.Button({
-            style_class: 'close-button', // CSS class for styling
-            child: new St.Icon({ icon_name: 'window-close-symbolic' }) // Icon for the close button
+            style_class: 'gamebar-close-button', // CSS class for styling
+            child: new St.Icon({ icon_name: 'window-close-symbolic' }) // Icon for the close button_______________________CHANGE 
         });
 
  // Hide the overlay when the close button is clicked
