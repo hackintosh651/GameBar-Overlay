@@ -7,6 +7,14 @@
       <description>Shows the GameBar Overlay indicator in the Top-Bar</description>
     </key>
 
+//-----------------------------------------------------------------new!!!!!!    
+
+    <key name="taskview-addon-position" type="s">
+      <default>'Bottom Center'</default>
+      <summary>Position for the task view button</summary>
+      <description>Set posion close overlay open gome overview/description>
+    </key>
+//-----------------------------------------------------------------new!!!!!!
     <key name="clock-addon-show-seconds" type="b">
       <default>false</default>
       <summary>Show seconds in the clock addon</summary>
