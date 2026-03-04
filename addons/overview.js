@@ -3,7 +3,7 @@ import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
 import { getPositionStyle } from '../utils.js';
 
-export class CloseButton {
+export class Overview {
     constructor(overlay, primaryMonitor, toggleOverlay) {
         this._overlay = overlay;
         this._primaryMonitor = primaryMonitor;
@@ -12,13 +12,13 @@ export class CloseButton {
         this._addonContainer = null;
         this._widthChangeId = null;
         this._heightChangeId = null;
-        this._createCloseButton();
+        this._createOverviewButton();
     }
 
     /**
      * Creates the close button widget and adds it to the overlay.
      * The close button is positioned on the right side of the overlay.
-     * Clicking the button will hide the overlay.
+     * Clicking the button will hide the overlay/show gome overview.
      */
     _createCloseButton() {
         this._addonContainer = new St.Widget({
@@ -30,3 +30,13 @@ export class CloseButton {
             style_class: 'gamebar-close-button', // CSS class for styling
             child: new St.Icon({ icon_name: 'window-close-symbolic' }) // Icon for the close button
         });
+
+
+
+
+
+
+   //----------------------------------work
+
+       });
+    global.workspace.toggleOverview(); //open overview
