@@ -20,23 +20,25 @@ export class Overview {
      * The close button is positioned on the right side of the overlay.
      * Clicking the button will hide the overlay/show gome overview.
      */
-    _createCloseButton() {
+    _createOverviewButton() {
         this._addonContainer = new St.Widget({
             layout_manager: new Clutter.BinLayout()
           });
 
         // Create the close button widget
         this._closeButton = new St.Button({
-            style_class: 'gamebar-close-button', // CSS class for styling
+            style_class: 'close-button', // CSS class for styling
             child: new St.Icon({ icon_name: 'window-close-symbolic' }) // Icon for the close button
         });
 
+ // Hide the overlay when the close button is clicked
+        this._closeButton.connect('clicked', () => {
+            this._toggleOverlay();
+        });
 
-
-
-
-
-   //----------------------------------work
-
-       });
+        this._addonContainer.add_child(this._closeButton)
+        // Add the addon to the overlay
+        this._overlay.add_child(this._addonContainer);
+  //----------------------------------NEW!!!!
+         });
     global.workspace.toggleOverview(); //open overview
