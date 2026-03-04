@@ -37,6 +37,7 @@ Open the Overlay by clicking the top-bar button or by pressing `Super + G`
 - [ ] Weather addon
 - [ ] Battery addon
 - [ ] Brightness addon
+- [ ] test
 
 ## Known issues
 
